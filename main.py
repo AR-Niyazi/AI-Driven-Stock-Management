@@ -1,7 +1,4 @@
-from src.data_loader import load_data
-from src.model import train_model
-from src.visualizer import plot_trends
+from src.data_loader import load_and_prepare
 
-df = load_data("data/sales_data.csv")
-train_model(df)
-plot_trends(df)
+df = load_and_prepare("data/sales_data.csv")
+print(df.head())
